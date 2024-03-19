@@ -1,0 +1,7 @@
+@import '@fontsource/jetbrains-mono';
+@import '@fontsource/lexend';
+
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
