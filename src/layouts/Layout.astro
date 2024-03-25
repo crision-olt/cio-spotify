@@ -1,18 +1,28 @@
 ---
-export interface Props {
-  content: {};
-}
-
+export interface Props {}
 ---
 
 <html lang="en">
-  <head>
-  </head>
+  <head> </head>
   <body class="dark:bg-slate-900">
-    <header></header>
-    <main>
-        <slot />
-    </main>
-    <footer></footer>
+    <div id="app" class="relative h-screen p-2 gap-2 flex items-stretch">
+      <aside class="[grid-area:aside] flex-col flex overflow-y-auto">Aside</aside>
+      <main class="[grid-area:main] rounded-lg bg-zing-900 overflow-y-auto">MAIN</main>
+      <footer class="[grid-area:footer] min-h-[100px]">FOOTER</footer>
+    </div>
   </body>
 </html>
+
+<style>
+  #app {
+    display: grid;
+    grid-template-areas:
+      'aside main main'
+      'footer footer footer';
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 1fr auto;
+  }
+  html {
+    background: #000;
+  }
+</style>

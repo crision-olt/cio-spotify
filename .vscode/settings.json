@@ -9,5 +9,9 @@
         "routes",
         "deps"
     ],
-    "editor.formatOnSave": true
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "prettier.requireConfig": false
 }
