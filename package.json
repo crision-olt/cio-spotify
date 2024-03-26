@@ -1,7 +1,7 @@
 {
   "name": "cio-spotify",
   "imports": {
-    "@*": ".src/*"
+    "@*": "./src/*"
   },
   "packageManager": "pnpm@8.15.4",
   "type": "module",
