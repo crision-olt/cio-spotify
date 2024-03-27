@@ -1,7 +1,7 @@
 {
   "name": "cio-spotify",
   "imports": {
-    "@*": "./src/*"
+    "#*": "./src/*"
   },
   "packageManager": "pnpm@8.15.4",
   "type": "module",
@@ -19,6 +19,7 @@
     "@fontsource/lexend": "5.0.19",
     "@tailwindcss/typography": "0.5.10",
     "astro": "4.5.5",
+    "msw": "^2.2.11",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rollup": "4.13.0",
@@ -26,6 +27,7 @@
     "typescript": "5.4.2"
   },
   "devDependencies": {
+    "@astrojs/check": "^0.5.10",
     "@astrojs/mdx": "2.2.0",
     "@astrojs/react": "3.1.0",
     "@astrojs/rss": "4.0.5",
