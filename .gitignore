@@ -15,6 +15,10 @@
 # AWS User-specific
 .idea/**/aws.xml
 
+# AStro DB Files for local development
+.astro/content.db
+.astro/db-types.d.ts
+
 # Generated files
 .idea/**/contentModel.xml
 
