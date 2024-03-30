@@ -1,6 +1,11 @@
 ---
-import AsideMenu from './AsideMenu.astro';
+import AsideMenu from '#components/AsideMenu.astro';
+import { db, Album } from 'astro:db';
+
 export interface Props {}
+
+const albums = await db.select().from(Album).all();
+console.log(albums);
 ---
 
 <html lang="en">
