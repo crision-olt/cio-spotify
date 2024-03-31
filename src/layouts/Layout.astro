@@ -1,11 +1,16 @@
 ---
 import AsideMenu from '#components/AsideMenu.astro';
 
-export interface Props {}
+export interface Props {
+  title: string;
+}
+const { title } = Astro.props;
 ---
 
 <html lang="en">
-  <head> </head>
+  <head>
+    <title>{title}</title>
+  </head>
   <body>
     <div id="app" class="relative h-screen p-2 gap-2 flex items-stretch">
       <aside class="[grid-area:aside] flex-col flex overflow-y-auto"><AsideMenu /></aside>
@@ -37,7 +42,7 @@ export interface Props {}
 
   @font-face {
     font-family: 'CircularStd';
-    src: url('/fonts/CircularStd-Medium.woff2') format('woff2');
+    src: url('fonts/CircularStd-Medium.woff2') format('woff2');
     font-weight: 500;
     font-style: normal;
     font-display: swap;
@@ -45,7 +50,7 @@ export interface Props {}
 
   @font-face {
     font-family: 'CircularStd';
-    src: url('/fonts/CircularStd-Book.woff2') format('woff2');
+    src: url('fonts/CircularStd-Book.woff2') format('woff2');
     font-weight: 400;
     font-style: normal;
     font-display: swap;
@@ -53,7 +58,7 @@ export interface Props {}
 
   @font-face {
     font-family: 'CircularStd';
-    src: url('/fonts/CircularStd-Light.woff2') format('woff2');
+    src: url('fonts/CircularStd-Light.woff2') format('woff2');
     font-weight: 300;
     font-style: normal;
     font-display: swap;
@@ -61,7 +66,7 @@ export interface Props {}
 
   @font-face {
     font-family: 'CircularStd';
-    src: url('/fonts/CircularStd-Bold.woff2') format('woff2');
+    src: url('fonts/CircularStd-Bold.woff2') format('woff2');
     font-weight: 700;
     font-style: normal;
     font-display: swap;
@@ -69,7 +74,7 @@ export interface Props {}
 
   @font-face {
     font-family: 'CircularStd';
-    src: url('/fonts/CircularStd-Black.woff2') format('woff2');
+    src: url('fonts/CircularStd-Black.woff2') format('woff2');
     font-weight: 900;
     font-style: normal;
     font-display: swap;
