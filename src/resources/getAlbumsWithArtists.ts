@@ -1,6 +1,7 @@
 import { db, eq, Album, Artist, Song, SongArtists } from 'astro:db';
 
 import type { AlbumWithArtists } from '#types/albumWithArtists.js';
+import { uniqueElements } from '#utils/uniqueElements.js';
 
 
 export const getAlbumsWithArtists = async (): Promise<AlbumWithArtists[]> => {
@@ -11,6 +12,6 @@ export const getAlbumsWithArtists = async (): Promise<AlbumWithArtists[]> => {
   .innerJoin(SongArtists, eq(Song.id, SongArtists.songId))
   .innerJoin(Artist, eq(SongArtists.artistId, Artist.id))
   .all();
-  const albums = result.map(({ Album, Artist})=> ({...Album, artists: [Artist.name]}));
+  const albums = uniqueElements(result.map(({ Album, Artist})=> ({...Album, artists: [Artist.name]})), ['id']);
   return albums;
 };
