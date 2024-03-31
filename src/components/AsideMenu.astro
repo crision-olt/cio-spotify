@@ -3,6 +3,11 @@ import HomeIcon from '#icons/Home.astro';
 import LibraryIcon from '#icons/Library.astro';
 import SearchIcon from '#icons/Search.astro';
 import AsideMenuItem from './AsideMenuItem.astro';
+import AsideMenuCard from './AsideMenuCard.astro';
+
+import { getAlbumsWithArtists } from '#resources/getAlbumsWithArtists.js';
+
+const albums = await getAlbumsWithArtists();
 ---
 
 <nav class="flex flex-col flex-1 gap-2">
@@ -21,6 +26,7 @@ import AsideMenuItem from './AsideMenuItem.astro';
       <AsideMenuItem>
         <LibraryIcon /> Your library
       </AsideMenuItem>
+      {albums.map((album) => <AsideMenuCard album={album}>{album.title}</AsideMenuCard>)}
     </ul>
   </div>
 </nav>
