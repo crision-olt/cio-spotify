@@ -19,23 +19,23 @@ export default async function seed() {
         {id: '3', title: 'Deep Side', color: 'red', cover: imageAlbums[2]},
     ]);
     await db.insert(Artist).values([
-        {id: '1', name: 'Pink Floyd', cover: imageArtists[0]},
-        {id: '2', name: 'The Beatles', cover: imageArtists[1]},
-        {id: '3', name: 'Michael Jackson', cover: imageArtists[2]},
+        {id: '1', name: 'Track Tribe', cover: imageArtists[0]},
+        {id: '2', name: 'Quincas Moreira', cover: imageArtists[1]},
+        {id: '3', name: 'Freedom Trail Studio', cover: imageArtists[2]},
     ]);
     await db.insert(Song).values([
-        {id: '1', title: 'Speak to Me', albumId: '1', image: imageAlbums[0], duration: 90},
-        {id: '2', title: 'Breathe', albumId: '1', image: imageAlbums[0], duration: 163},
-        {id: '3', title: 'On the Run', albumId: '1', image: imageAlbums[0], duration: 222},
-        {id: '4', title: 'Time', albumId: '1', image: imageAlbums[0], duration: 421},
-        {id: '5', title: 'Come Together', albumId: '2', image: imageAlbums[1], duration: 259},
-        {id: '6', title: 'Something', albumId: '2', image: imageAlbums[1], duration: 182},
-        {id: '7', title: 'Maxwell\'s Silver Hammer', albumId: '2', image: imageAlbums[1], duration: 213},
-        {id: '8', title: 'Oh! Darling', albumId: '2', image: imageAlbums[1], duration: 230},
-        {id: '9', title: 'Money', albumId: '3', image: imageAlbums[2], duration: 382},
-        {id: '10', title: 'Us and Them', albumId: '3', image: imageAlbums[2], duration: 462},
-        {id: '11', title: 'Any Colour You Like', albumId: '3', image: imageAlbums[2], duration: 205},
-        {id: '12', title: 'Brain Damage', albumId: '3', image: imageAlbums[2], duration: 228},
+        {id: '1', title: 'No indication', albumId: '1', image: imageAlbums[0], duration: 90},
+        {id: '2', title: 'Little umbrellas', albumId: '1', image: imageAlbums[0], duration: 163},
+        {id: '3', title: 'Sweethearts', albumId: '1', image: imageAlbums[0], duration: 222},
+        {id: '4', title: 'Limousines', albumId: '1', image: imageAlbums[0], duration: 421},
+        {id: '5', title: 'Lazy Laura', albumId: '2', image: imageAlbums[1], duration: 259},
+        {id: '6', title: 'Funky carioca', albumId: '2', image: imageAlbums[1], duration: 182},
+        {id: '7', title: 'Nature nurture', albumId: '2', image: imageAlbums[1], duration: 213},
+        {id: '8', title: 'La docerola', albumId: '2', image: imageAlbums[1], duration: 230},
+        {id: '9', title: 'Putting on the ritz', albumId: '3', image: imageAlbums[2], duration: 382},
+        {id: '10', title: 'Take me out to the ballgame', albumId: '3', image: imageAlbums[2], duration: 462},
+        {id: '11', title: 'Thou swell', albumId: '3', image: imageAlbums[2], duration: 205},
+        {id: '12', title: 'When irish eyes are smiling', albumId: '3', image: imageAlbums[2], duration: 228},
     ]);
     await db.insert(SongArtists).values([
         {songId: '1', artistId: '1'},
