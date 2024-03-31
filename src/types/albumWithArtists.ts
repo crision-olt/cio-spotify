@@ -3,5 +3,5 @@ export type AlbumWithArtists = {
     title: string;
     color: string;
     cover: string;
-    artists: string[];
+    artist: string;
 };
