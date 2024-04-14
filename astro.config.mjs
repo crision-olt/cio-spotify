@@ -9,5 +9,6 @@ import db from '@astrojs/db';
 export default defineConfig({
   site: 'https://crision-olt.github.io/',
   base: './',
+  output: 'server',
   integrations: [db(), react(), tailwind({ config: { applyBaseStyles: false } }), sitemap()],
 });
