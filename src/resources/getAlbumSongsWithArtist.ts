@@ -1,7 +1,7 @@
 import type { DBError } from '#types/dbError.js';
 import type { Result } from '#types/result.js';
 import type { SongWithArtists } from '#types/songWithArtists.js';
-import { db, eq, inArray, Album, Artist, Song, SongArtists, AlbumArtists } from 'astro:db';
+import { db, eq, inArray, Artist, Song, SongArtists } from 'astro:db';
 
 const songSelect = () => ({
   id: Song.id,
