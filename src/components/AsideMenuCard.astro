@@ -6,9 +6,9 @@ interface Props {
 }
 
 const { album } = Astro.props;
-const { id, title, color, cover, artist } = album;
+const { id, title, cover, artists } = album;
 
-const artistsString = artist;
+const artistsString = artists.map(({ name }) => name).join(', ');
 ---
 
 <a
