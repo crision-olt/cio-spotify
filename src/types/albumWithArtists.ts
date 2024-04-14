@@ -1,7 +1,6 @@
-export type AlbumWithArtists = {
-    id: string;
-    title: string;
-    color: string;
-    cover: string;
-    artist: string;
+import type { Album } from './album';
+import type { ArtistByAlbumId } from './artistByAlbumId';
+
+export type AlbumWithArtists = Album & {
+  artists: ArtistByAlbumId[];
 };
